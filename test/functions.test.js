@@ -1,4 +1,8 @@
-import assert from "node:assert/strict";
+import { strict as assert } from "node:assert";
 import { flatten } from "../index.js";
 
-assert.deepEqual(flatten(["a", [1, ["B"]]]), ["a", 1, "B"]);
+describe("flatten()", function () {
+  it(`should return a flat array`, function () {
+    assert.deepEqual(flatten(["a", [1, ["B"]]]), ["a", 1, "B"]);
+  });
+});
